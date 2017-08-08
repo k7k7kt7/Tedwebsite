@@ -1,0 +1,16 @@
+// mixin
+
+
+// based on Tachyons
+$mqs: (
+  ns: $breakpoint-not-small,
+  m: $breakpoint-medium,
+  l: $breakpoint-large,
+) !default;
+
+
+@mixin mq($mq) {
+  @media #{map-get($mqs, $mq)} {
+    @content;
+  }
+}

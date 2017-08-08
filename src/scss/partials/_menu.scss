@@ -1,0 +1,37 @@
+// state of body when js event listener triggers
+.is-offcanvas {
+  margin-left: -230px;
+  margin-right: 230px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  position: fixed;
+  right: -230px;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: inline-block;
+
+    @include mq(ns) {
+      display: block;
+    }
+  }
+
+  &__toggle {
+    user-select: none;
+  }
+
+  @include mq(ns) {
+    display: block;
+  }
+// state of nav menu when js listener triggers
+  &__open {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+
+}
