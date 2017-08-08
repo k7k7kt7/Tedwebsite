@@ -11,16 +11,33 @@
   margin: 0;
   padding: 0;
 
-  &__item {
-    display: inline-block;
+  @include mq(ns) {
+    right: 0;
+  }
 
+  &__item {
+    display: block;
+    margin: 1rem;
     @include mq(ns) {
-      display: block;
+      display: inline-block;
+      margin: 0 1rem;
     }
   }
 
+  &__link {
+    @include mq(ns) {
+      color: $white;
+    }
+    color: $near-black;
+  }
+
   &__toggle {
+    @include mq(ns) {
+      display: none;
+    }
     user-select: none;
+    color: $white;
+    padding: 1rem;
   }
 
   @include mq(ns) {
