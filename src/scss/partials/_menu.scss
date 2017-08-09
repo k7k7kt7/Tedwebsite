@@ -1,13 +1,13 @@
 // state of body when js event listener triggers
 .is-offcanvas {
-  margin-left: -230px;
-  margin-right: 230px;
+  margin-left: -8rem;
+  margin-right: 8rem;
 }
 
 .nav-menu {
   list-style-type: none;
   position: fixed;
-  right: -230px;
+  right: -8rem;
   margin: 0;
   padding: 0;
 
@@ -48,6 +48,9 @@
   &__open {
     position: fixed;
     right: 0;
+    width: 8rem;
+    background-color: $light-blue;
+    height: 100%;
     top: 0;
   }
 
