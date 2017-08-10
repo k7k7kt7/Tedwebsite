@@ -1,8 +1,14 @@
-// state of body when js event listener triggers
-.is-offcanvas {
+%is-offcanvas {
   margin-left: -8rem;
   margin-right: 8rem;
 }
+
+// state of body when js event listener triggers
+.is-offcanvas {
+  @extend %is-offcanvas;
+  transition: 400ms all ease;
+}
+
 
 .nav-menu {
   list-style-type: none;
@@ -10,7 +16,6 @@
   right: -8rem;
   margin: 0;
   padding: 0;
-
   @include mq(ns) {
     right: 0;
     position: relative;
@@ -30,6 +35,7 @@
       color: $white;
     }
     color: $near-black;
+    transition: 400ms all ease;
   }
 
   &__toggle {
@@ -39,6 +45,10 @@
     user-select: none;
     color: $white;
     padding: 1rem;
+    transition: 400ms all ease;
+    &.is-offcanvas {
+      @extend %is-offcanvas;
+    }
   }
 
   @include mq(ns) {
@@ -49,7 +59,6 @@
     position: fixed;
     right: 0;
     width: 8rem;
-    background-color: $light-blue;
     height: 100%;
     top: 0;
   }
