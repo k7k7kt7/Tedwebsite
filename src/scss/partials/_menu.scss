@@ -31,11 +31,11 @@
   }
 
   &__link {
-    &--white {
+    transition: 400ms all ease;
+    color: $black;
+    @include mq(ns) {
       color: $white;
     }
-    color: $near-black;
-    transition: 400ms all ease;
   }
 
   &__toggle {
