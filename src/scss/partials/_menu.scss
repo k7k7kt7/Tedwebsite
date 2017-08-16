@@ -32,9 +32,12 @@
 
   &__link {
     transition: 400ms all ease;
-    color: $black;
-    @include mq(ns) {
-      color: $white;
+    color: $near-black;
+    &--cover {
+      color: $near-black;
+      @include mq(ns) {
+        color: $white;
+      }
     }
   }
 
